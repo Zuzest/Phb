@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.spacer {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#wrapper {
+  flex: 1 0 auto;
+
+  display: flex;
+  flex-direction: row;
+
+  /*background-color: #369;*/
+}
+
+header,
+footer {
+  flex: none;
+}
+
+header {
+  order: -1;
+}
+
+main#content {
+  flex: 1 0 auto;
+}
+
+aside {
+  flex: 0 0 15em;
+}

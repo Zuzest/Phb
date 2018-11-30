@@ -1,0 +1,92 @@
+<?php
+/**
+ * тут собираем все конфиги которые имеют зависимость от пользователя
+ */
+define('DEV', true);
+define('PLUGINS_DIR', dirname(ROOT).'/plugins/');
+
+return new \Phalcon\Config([
+  'application' => [
+
+    'baseUri'        => '/',
+    'name' => 'app',
+    'path' => null,
+    'pathList' => [
+      'app' => 'app/',
+      'adm' => 'adm/',
+      'cli' => 'console/',
+    ],
+    'accessUri' => [
+      'nimda' => 'adm',
+    ],
+  ],
+  'database'    => [
+    'adapter'  => 'Mysql',
+    'host'     => 'localhost',
+    'username' => '',
+    'password' => '',
+    'dbname'   => '',
+    'set_names' => 'UTF8MB4',
+  ],
+  'crypt'       => [
+    'key' => '',
+  ],
+  'cookies'      => [
+    'encryption' => true,
+  ],
+  'cache'       => [
+    'memcache' => [
+      'lifetime' => 86400,
+      'servers'  => [
+        [
+          'host'   => 'localhost',
+          'port'   => '11211',
+          'weight' => 1,
+        ],
+      ],
+      'client'   => [
+        \Memcached::OPT_HASH       => \Memcached::HASH_MD5,
+        \Memcached::OPT_PREFIX_KEY => '',
+      ],
+    ],
+    'redis' => [
+      'uniqueId'  => '',
+      'host' => '',
+      // 'port' => 6379,
+      'auth' => '',
+      'persistent' => false,
+      // 'lifetime' => 3600,
+      'prefix' => '',
+      'index' => 1,
+    ],
+  ],
+  'session' => [
+    'lifetime'  => 3600,
+  ],
+  'plugins'     => [
+    'smarty'             => [
+      'class'  => PLUGINS_DIR.'smarty/libs/Smarty.class.php',
+      'compileDir' => ROOT.'compiled/',
+    ],
+    'clickhouse' => [
+      'autoloadPath' => PLUGINS_DIR.'phpClickHouse/vendor/autoload.php',
+      'database_connect' => [
+        'host' => '',
+        'port' => 8123,
+        'username' => 'default',
+        'password' => '',
+        'database' => '',
+      ],
+    ],
+    'mobileDetectorPath' => PLUGINS_DIR.'Mobile-Detect/Mobile_Detect.php',
+    'excelDir'           => PLUGINS_DIR.'PhpSpreadsheet/src/',
+    'psrsimplecacheDir'  => PLUGINS_DIR.'simple-cache/src/',
+    'incubatorDir'       => PLUGINS_DIR.'incubator/Library/Phalcon/',
+    'phpClickHouse'      => PLUGINS_DIR.'phpClickHouse/',
+  ],
+  'namespaces'  => [
+    'PhpOffice'        => PLUGINS_DIR.'PhpSpreadsheet/src/',
+    'Models'        => ROOT.'models/',
+    'Psr\\SimpleCache' => PLUGINS_DIR.'simple-cache/src/',
+  ],
+]);

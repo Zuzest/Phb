@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf');
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+
+  /*background: #3A3E40;*/
+  /*background-image: url(/images/w7.jpg);
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-position: center center;*/
+  /*color: #eee;*/
+
+}
+
+body {
+  font: 14px/1.2em 'Roboto Condensed', 'sans-serif';
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #eee;
+  background: #3A3E40;
+  background-image: url(/images/w7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  /*background: #34679A;*/
+}
+
+
+
+input {
+  box-sizing: border-box;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+}
+
+/*fonts\Roboto_Condensed\*/
+
+/* Объявляем шрифт */
+/*@font-face {
+  font-family: 'Имя шрифта';
+  src: url('путь/до/него');
+}*/
+
+/* Применяем шрифт */
+/*p {
+  font-family: 'Имя шрифта', Arial;
+}*/
+
+/*@font-face {
+ font-family: 'Имя_шрифта_любое';
+ src: url('Имя_файла_шрифта.eot');
+ src: url('Имя_файла_шрифта.eot?#iefix') format('embedded-opentype'),
+ url('Имя_файла_шрифта.woff') format('woff'),
+ url('Имя_файла_шрифта.ttf') format('truetype'),
+ url('Имя_файла_шрифта.svg#DSNoteRegular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}*/

@@ -1,0 +1,144 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 1.2em;
+
+  background-color: #161513;
+}
+input {
+  box-sizing: border-box;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+}
+.spacer {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-image: url(/images/w7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+@keyframes show_none {
+  0% {
+    background:#DEDEDEDD;
+  }
+    /*box-shadow: 0em 0em 5em 0.7em #333;*/
+  100% {
+    background: #DEDEDE33;
+    /*box-shadow: 0em 0em 0em 0em ;*/
+    /*box-shadow: none;*/
+  }
+}
+form#content {
+  flex: 0 0 auto;
+  align-self: center;
+
+  padding: 0 1em 1em;
+
+  display: flex;
+  flex-direction: column;
+
+  /*min-width: 20em;*/
+  /*min-height: 20em;*/
+}
+@keyframes show {
+  100% {
+    background: #DEDEDEDD;
+    /*box-shadow: 0em 0em 5em 0.7em #333;*/
+  }
+
+
+  }
+/*}*/
+body form#content {
+  /*background-color: #DEDEDEDD;*/
+  background: #DEDEDE33;
+  /*box-shadow: 0em 0em 0em 0em ;*/
+  animation: show_none 10s forwards;
+}
+body:hover form#content {
+  animation: show 1s forwards;
+  /*background-color: #DEDEDEDD;*/
+}
+
+div#modal-mask{
+  position: absolute;
+  display: flex;
+  /* height: 100%; */
+  /* width: 100%; */
+  background: #07121dc7;
+  justify-content: center;
+  left: 0em;
+  top: 0;
+  bottom: 50%;
+  right: 0;
+}
+div#modal-info {
+  flex: none;
+  align-self: center;
+  padding: 2em;
+  background: #eeeeee;
+}
+div#tooltip {
+  position: absolute;
+  display: inline-block;
+  background: #282a2f;
+  color: #ffffff;
+  padding: 0.1em 1em;
+  border-radius: 0.3em;
+  border: 1px solid #fff;
+  left: 39%;
+  top: 52em;
+  line-height: 1.2em;
+}
+
+div#modal-mask,
+div#tooltip {
+  display: none;
+}
+
+div.button_wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  line-height: 2em;
+  height: 2em;
+  padding: 0 1em;
+  font-size: 1em;
+}
+
+button.norg {
+  background-color: #009FE3;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+button.norg:hover {
+  border: 1px solid #336699;
+  /*box-sizing: border-box;*/
+  /*border: none;*/
+  /*border-left: .3em solid #ffffff;*/
+  /*border-right: .3em solid #ffffff;*/
+}
